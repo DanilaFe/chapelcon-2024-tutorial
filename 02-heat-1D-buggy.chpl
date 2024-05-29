@@ -13,5 +13,5 @@ for 1..N {
   un <=> u;
   for i in omega do
     u[i] = un[i] + alpha *
-	   (un[i-1] – 2*un[i] + un[i+1]);
+	   (un[i-1] - 2*un[i] + un[i+1]);
 }

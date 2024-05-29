@@ -10,6 +10,6 @@ for 1..N {
   forall (i, j) in omegaHat do
     u[i, j] = un[i, j] + alpha * (
 	       un[i-1, j] + un[i, j-1] +
-	       un[i+1, j] + un[i, j+1] –
+	       un[i+1, j] + un[i, j+1] -
 	       4 * un[i, j]);
 }

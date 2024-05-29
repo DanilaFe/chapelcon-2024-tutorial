@@ -13,5 +13,5 @@ for 1..N {
   un <=> u;
   forall i in omegaHat do
     u[i] = un[i] + alpha *
-	   (un[i-1] – 2*un[i] + un[i+1]);
+	   (un[i-1] - 2*un[i] + un[i+1]);
 }
