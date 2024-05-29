@@ -1,0 +1,23 @@
+{
+  "image": "danilafe/chapel:0.4",
+  "containerEnv": {
+    "CHPL_COMM": "none",
+  },
+  "features": {},
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "chpl-hpe.chapel-vscode"
+      ],
+      "settings": {
+        "chapel.CHPL_HOME": "/opt/chapel",
+      }
+    }
+  }
+}
+
