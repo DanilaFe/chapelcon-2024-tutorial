@@ -1,3 +1,7 @@
+config const nx, ny = 1000;
+config const N = 10000;
+const alpha = 0.1;
+
 const omega = {0..<nx, 0..<ny},
       omegaHat = omega.expand(-1);
 
@@ -6,7 +10,7 @@ u[nx/4..nx/2, ny/4..ny/2] = 2.0;
 var un = u;
 
 for 1..N {
-  un <=> u
+  un <=> u;
   forall (i, j) in omegaHat do
     u[i, j] = un[i, j] + alpha * (
 	       un[i-1, j] + un[i, j-1] +

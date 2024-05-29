@@ -1,3 +1,5 @@
+use BlockDist;
+
 config const nx = 100000;
 config const N = 10000;
 const alpha = 0.1;
