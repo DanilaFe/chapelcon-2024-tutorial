@@ -1,6 +1,6 @@
 config const nx = 100000;
 config const N = 10000;
-const alpha = 0.1;
+config const alpha = 0.1;
 
 on here.gpus[0] {
   const omega = {0..<nx},

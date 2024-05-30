@@ -4,7 +4,7 @@ use ImageUtils;
 config const nx = 1000;
 config const ny = 1000;
 config const N = 10000;
-const alpha = 0.1;
+config const alpha = 0.1;
 
 const omega = stencilDist.createDomain(0..<nx, 0..<ny),
       omegaHat = omega.expand(-1);

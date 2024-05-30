@@ -3,7 +3,7 @@ use ImageUtils;
 
 config const nx = 100000;
 config const N = 10000;
-const alpha = 0.1;
+config const alpha = 0.1;
 
 const omega = blockDist.createDomain({0..<nx}),
       omegaHat = omega.expand(-1);
