@@ -1,7 +1,8 @@
 use BlockDist;
 use ImageUtils;
 
-config const nx, ny = 1000;
+config const nx = 1000;
+config const ny = 1000;
 config const N = 10000;
 const alpha = 0.1;
 
