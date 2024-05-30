@@ -43,9 +43,11 @@ module ImageUtils {
 
     checkDims(u);
 
-    @functionStatic
-    ref pipe = try! new mediaPipe("heat.mp4", imageType.bmp, framerate);
+    on Locales[0] {
+      @functionStatic
+      ref pipe = try! new mediaPipe("heat.mp4", imageType.bmp, framerate);
 
-    pipe.writeFrame(processFrameData(u));
+      pipe.writeFrame(processFrameData(u));
+    }
   }
 }
