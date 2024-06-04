@@ -2,6 +2,13 @@
   "image": "danilafe/chapel:0.4",
   "containerEnv": {
     "CHPL_COMM": "none",
+    "GASNET_SPAWNFN": "L",
+    "GASNET_ROUTE_OUTPUT": "0",
+    "CHPL_GASNET_CFG_OPTIONS": "--disable-ibv",
+    "GASNET_QUIET": "Y",
+    "GASNET_MASTERIP": "127.0.0.1",
+    "GASNET_WORKERIP": "127.0.0.0",
+    "CHPL_RT_OVERSUBSCRIBED": "yes"
   },
   "features": {},
   "customizations": {
@@ -15,7 +22,7 @@
         "chpl-hpe.chapel-vscode"
       ],
       "settings": {
-        "chapel.CHPL_HOME": "/opt/chapel",
+        "chapel.CHPL_HOME": "/opt/chapel"
       }
     }
   }
