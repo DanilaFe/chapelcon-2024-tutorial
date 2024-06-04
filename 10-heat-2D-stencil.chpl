@@ -22,7 +22,7 @@ if RunCommDiag then startCommDiagnostics();
 
 for 1..N {
   un <=> u;
-  omega.updateFluff();
+  un.updateFluff();
   forall (i, j) in omegaHat do
     u[i, j] = un[i, j] + alpha * (
 	       un[i-1, j] + un[i, j-1] +
