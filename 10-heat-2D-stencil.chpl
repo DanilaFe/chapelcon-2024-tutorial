@@ -9,7 +9,7 @@ config const ny = 1000;
 config const N = 10000;
 config const alpha = 0.1;
 
-const omega = stencilDist.createDomain(0..<nx, 0..<ny, fluff=(1, 1)),
+const omega = stencilDist.createDomain({0..<nx, 0..<ny}, fluff=(1, 1)),
       omegaHat = omega.expand(-1);
 
 var u: [omega] real = 1.0;
