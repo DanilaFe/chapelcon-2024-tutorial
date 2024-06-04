@@ -1,6 +1,9 @@
 use BlockDist;
 use ImageUtils;
 
+use CommDiagnostics;
+config param RunCommDiag = false;
+
 config const nx = 1000;
 config const ny = 1000;
 config const N = 10000;
@@ -15,6 +18,8 @@ var un = u;
 
 writeImage(u);
 
+if RunCommDiag then startCommDiagnostics();
+
 for 1..N {
   un <=> u;
   forall (i, j) in omegaHat do
@@ -23,4 +28,9 @@ for 1..N {
 	       un[i+1, j] + un[i, j+1] -
 	       4 * un[i, j]);
   writeImage(u);
+}
+
+if RunCommDiag {
+  stopCommDiagnostics();
+  printCommDiagnosticsTable();
 }
