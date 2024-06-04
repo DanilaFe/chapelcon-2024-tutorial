@@ -2,7 +2,7 @@ use BlockDist;
 use ImageUtils;
 
 use CommDiagnostics;
-config param RunCommDiag = false;
+config const RunCommDiag = false;
 
 config const nx = 1000;
 config const ny = 1000;
