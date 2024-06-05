@@ -27,8 +27,8 @@ This repo includes a `devcontainer.json` file, making it usable from GitHub Code
 In the Codespace, compile Chapel programs using the __Terminal__ tab by using the `chpl` compiler:
 
 ```bash
-chpl 01-hello.chpl
-./01-hello
+chpl 01-heat-1D-serial.chpl
+./01-heat-1D-serial
 ```
 
 ### Simulating Multiple Nodes
@@ -36,10 +36,10 @@ Although the Codespace is set to a single-locale (single-node) mode by default, 
 
 ```bash
 # Compile a program that distributes computation to multiple nodes
-CHPL_COMM=gasnet chpl 01-hellopar.chpl
+CHPL_COMM=gasnet chpl 07-heat-1D-block.chpl
 
 # Run hello using two simulated nodes
-./01-hellopar -nl 2
+./07-heat-1D-block -nl 2
 ```
 
 To avoid having to include `CHPL_COMM` in each compilation command, you can
@@ -47,8 +47,8 @@ To avoid having to include `CHPL_COMM` in each compilation command, you can
 
 ```bash
 export CHPL_COMM=gasnet
-chpl 01-hellopar.chpl
-./01-hellopar -nl 2
+chpl 07-heat-1D-block.chpl
+./07-heat-1D-block -nl 2
 ```
 
 ### Simulating GPU Support
@@ -59,7 +59,7 @@ this mode, set the `CHPL_LOCALE_MODEL` to `gpu` (to enable GPU support)
 and `CHPL_GPU` to `cpu` to select "CPU-as-device" mode.
 
 ```bash
-CHPL_LOCALE_MODEL=gpu CHPL_GPU=cpu chpl 01-hellopar.chpl
+CHPL_LOCALE_MODEL=gpu CHPL_GPU=cpu chpl 06-heat-1D-gpu.chpl
 ```
 
 ## Using Docker
@@ -89,11 +89,11 @@ your own machine.
 
 ## Building Chapel from Source on Your Machine
 
-Please follow the instructions on the [Download Chapel](https://chapel-lang.org/download.html) page to build the Chapel compiler and runtime from source and get set up with the Chapel compiler executable `chpl`. From there, you can compile and run the `01-hello.chpl` file in this repository as follows:
+Please follow the instructions on the [Download Chapel](https://chapel-lang.org/download.html) page to build the Chapel compiler and runtime from source and get set up with the Chapel compiler executable `chpl`. From there, you can compile and run the `01-heat-1D-serial.chpl` file in this repository as follows:
 
 ```bash
-chpl 01-hello.chpl
-./01-hello
+chpl 01-heat-1D-serial.chpl
+./01-heat-1D-serial
 ```
 
 To make use of multiple nodes (or to simulate multi-node execution), please
