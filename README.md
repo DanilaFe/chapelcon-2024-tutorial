@@ -1,6 +1,6 @@
 # Introduction to Chapel
 
-[Chapel](https://chapel-lang.org/) is a programming language for productive parallel computing. This repository contains code from the [ChapelCon 2024](https://chapel-lang.org/ChapelCon24.html) Chapel tutorial.
+[Chapel](https://chapel-lang.org/) is a programming language for productive parallel computing. This repository contains code from the [ChapelCon 2024](https://chapel-lang.org/ChapelCon24.html) Chapel tutorial. The [slides](https://chapel-lang.org/ChapelCon/2024/chapel-tutorial.pdf) and [video recording](https://www.youtube.com/watch?v=N2LWN3A9rck) are also available.
 
 To get started with this template, you can either use [GitHub Codespaces](#using-a-codespace) or your own machine (via [Docker](#using-docker) or by [building from source](#building-chapel-from-source-on-your-machine)).
 
